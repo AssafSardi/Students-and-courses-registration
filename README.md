@@ -48,7 +48,7 @@ USE students_courses_db;
 SHOW tables;
 ```
 ### DB Scheme
-Will auto generated - no need to execute 
+Will be auto generated - no need to execute 
 ```shell
 CREATE TABLE sessions (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -84,13 +84,13 @@ CREATE TABLE students_courses (
     FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
 );
 ```
-And finally, stop the server
+At the end, stop the server
 ```shell
 mysql.server stop
 ```
 
 # Instructions for how to run
-1. Start MySQL server as metioned above. Don't create the DB scheme.
+1. Start MySQL server as mentioned above. Don't create the DB scheme.
 2. Run the application using Java 17
 3. DB tables will be automatically generated.
 4. At the next section of this file, you'll find all http requests written, ready to run. Just need to change credentials.
@@ -98,7 +98,8 @@ mysql.server stop
    - Once logged in, you will get a `session-key`. use it for all the other admin's operations on students and courses.
 6. After creating a student, you'll get his `special_key` (In Console, not in Terminal).
    - Use student's `email` and `special_key` to login.
-   - After login you will get student's `session_key` and be able to perform operation on courses like register and cancel. Important: remember to change to the relevant `session_key` each request
+   - After login you will get student's `session_key` and be able to perform operation on courses like register and cancel. Important: remember to change to the relevant `session_key` each request.
+7. At the end, stop MySQL server.
 
 
 
