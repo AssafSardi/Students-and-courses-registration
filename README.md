@@ -90,14 +90,15 @@ mysql.server stop
 ```
 
 # Instructions for how to run
-1. Run the application using Java 17
-2. DB tables will be automatically generated.
-3. At the next section of this file, you'll find all http requests written, ready to run. Just need to change credentials.
-4. First, login as admin. Admin is pre-generated at application startup. His credentials are defined at `StudentsCoursesApplication.java`.
+1. Start MySQL server as metioned above. Don't create the DB scheme.
+2. Run the application using Java 17
+3. DB tables will be automatically generated.
+4. At the next section of this file, you'll find all http requests written, ready to run. Just need to change credentials.
+5. First, login as admin. Admin is pre-generated at application startup. His credentials are defined at `StudentsCoursesApplication.java`.
    - Once logged in, you will get a `session-key`. use it for all the other admin's operations on students and courses.
-5. After creating a student, you'll get his `special_key` (In Console, not in Terminal).
+6. After creating a student, you'll get his `special_key` (In Console, not in Terminal).
    - Use student's `email` and `special_key` to login.
-   - After login you can perform operation on courses as student like register and cancel.
+   - After login you will get student's `session_key` and be able to perform operation on courses like register and cancel. Important: remember to change to the relevant `session_key` each request
 
 
 
